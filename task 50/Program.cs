@@ -55,8 +55,8 @@ int n = UserInputInt("Введите  длину  столбцов масива 
 int[,] matrixResult = GetMatrix(m, n);
 PrintMatrix(matrixResult);
 Console.WriteLine();
-int indexLine = UserInputInt("Введите   индекс строки ");     // ввод индексов по "человечески с 1"
-int indexСolumn = UserInputInt("Введите   индекс столба ");
+int indexLine = UserInputInt("Введите  номер строки масива ");     // ввод индексов по "человечески с 1"
+int indexСolumn = UserInputInt("Введите  номер столбца масива ");
 PrintIndexMatrix(matrixResult, indexLine, indexСolumn, m, n);
 
 

@@ -53,7 +53,9 @@ void Arithmeticmean(int[,] arr)
         {
             sum = sum + arr[i, j];
         }
-        Console.Write($"{Math.Round(sum / arr.GetLength(0), 1)} ");
+        Console.WriteLine($"среднее арифметическое элементов  столбце {j}  составляет {sum / arr.GetLength(0)} ");  
+        
+        
     }
 }
 

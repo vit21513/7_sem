@@ -47,7 +47,7 @@ void PrintIndexMatrix(int[,] array, int indStrok, int indexStolb, int indS, int 
 {
     if (indStrok > indStr || indexStolb > indS) Console.WriteLine("Такого элемента нет в массиве");
     else if (indStrok <= 0 || indexStolb <= 0) Console.WriteLine("такого элемента нет в массиве");
-    else Console.WriteLine($" Значение числа по введенному индексу составляет {array[indStrok - 1, indexStolb - 1]}");
+    Console.WriteLine($" Значение числа по введенному индексу составляет {array[indStrok - 1, indexStolb - 1]}");
 }
 
 int m = UserInputInt("Введите   длину строки масива ");

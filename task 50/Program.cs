@@ -43,7 +43,7 @@ int UserInputInt(string userInputStr)
 
 }
 
-void PrintIndexMatrix(int[,] array, int indStrok, int indexStolb, int indS, int indStr)
+void PrintIndexMatrix(int[,] array, int indStrok, int indexStolb, int indStr, int indS)
 {
     if (indStrok > indStr || indexStolb > indS) Console.WriteLine("такого элемента нет в массиве");
     else if (indStrok <= 0 || indexStolb <= 0) Console.WriteLine("такого элемента нет в массиве");

@@ -45,18 +45,18 @@ int UserInputInt(string userInputStr)
 
 void PrintIndexMatrix(int[,] array, int indStrok, int indexStolb, int indS, int indStr)
 {
-    if (indStrok - 1 < indStr || indexStolb < indS)
-        if (indStrok - 1 > 0 || indexStolb > 0) Console.WriteLine($" Значение числа по введенному индексу составляет {array[indStrok - 1, indexStolb - 1]}");
-        else Console.WriteLine("такого элемента нет в массиве");
+    if (indStrok > indStr || indexStolb > indS) Console.WriteLine("Значения введеного индекса находятся за пределами массива");
+    else if (indStrok <= 0 || indexStolb <= 0) Console.WriteLine("Значения введеного индекса не корректны");
+    else Console.WriteLine($" Значение числа по введенному индексу составляет {array[indStrok - 1, indexStolb - 1]}");
 }
-Console.WriteLine("такого элемента нет в массиве");
+
 int m = UserInputInt("Введите   длину строки масива ");
 int n = UserInputInt("Введите  длину  столбцов масива ");
 int[,] matrixResult = GetMatrix(m, n);
 PrintMatrix(matrixResult);
 Console.WriteLine();
-int indexLine = UserInputInt("Введите  номер строки масива ");     // ввод индексов по "человечески с 1"
-int indexСolumn = UserInputInt("Введите  номер столбца масива ");
+int indexLine = UserInputInt("Введите   индекс строки ");
+int indexСolumn = UserInputInt("Введите   индекс столба ");
 PrintIndexMatrix(matrixResult, indexLine, indexСolumn, m, n);
 
 

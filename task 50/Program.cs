@@ -45,11 +45,11 @@ int UserInputInt(string userInputStr)
 
 void PrintIndexMatrix(int[,] array, int indStrok, int indexStolb, int indS, int indStr)
 {
-    if (indStrok > indStr || indexStolb > indS) Console.WriteLine("Такого элемента нет в массиве");
-    else if (indStrok <= 0 || indexStolb <= 0) Console.WriteLine("такого элемента нет в массиве");
-    Console.WriteLine($" Значение числа по введенному индексу составляет {array[indStrok - 1, indexStolb - 1]}");
+    if (indStrok - 1 < indStr || indexStolb < indS)
+        if (indStrok - 1 > 0 || indexStolb > 0) Console.WriteLine($" Значение числа по введенному индексу составляет {array[indStrok - 1, indexStolb - 1]}");
+        else Console.WriteLine("такого элемента нет в массиве");
 }
-
+Console.WriteLine("такого элемента нет в массиве");
 int m = UserInputInt("Введите   длину строки масива ");
 int n = UserInputInt("Введите  длину  столбцов масива ");
 int[,] matrixResult = GetMatrix(m, n);
